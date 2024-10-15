@@ -69,9 +69,11 @@ function createFileChunks(file, filename) {
 
 function createRequest(filename, chunkFileName, chunk) {
   return axiosInstance.post(`/upload/${filename}`, chunk, {
+    //这个请求头是告诉服务器请求体是一个二进制格式，是一个字节流
     headers: {
       "Content-Type": "application/octet-stream",
     },
+    //此查询参数会拼接到url地址后
     params: {
       chunkFileName,
     },

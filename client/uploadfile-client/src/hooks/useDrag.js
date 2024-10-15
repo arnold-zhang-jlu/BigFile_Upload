@@ -1,6 +1,6 @@
 import { message } from "antd";
 import { useState, useEffect, useCallback } from "react";
-import { MAX_FILE_SIZE } from "../constant";
+import { MAX_FILE_SIZE } from "../utils/constant";
 
 function useDrag(uploadContainerRef) {
   const [selectedFile, setSelectedFile] = useState(null);
